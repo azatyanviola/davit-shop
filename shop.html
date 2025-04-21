@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="title">TechPlus | Shop Premium Tech Gadgets & Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" data-lang="logo"><span class="logo-tech">Tech</span><span class="logo-plus">Plus</span><span class="logo-dot">.</span></a>
+            </div>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link bold" data-lang="shop" aria-haspopup="true">Shop <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="#smartphones" data-lang="smartphones">Smartphones</a>
+                        <a href="#laptops" data-lang="laptops">Laptops</a>
+                        <a href="#tablets" data-lang="tablets">Tablets</a>
+                        <a href="#smart-home" data-lang="smart-home">Smart Home</a>
+                        <a href="#accessories" data-lang="accessories">Accessories</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#categories" class="nav-link bold" data-lang="categories" aria-haspopup="true">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="#new-releases" data-lang="new-releases">New Releases</a>
+                        <a href="#best-sellers" data-lang="best-sellers">Best Sellers</a>
+                        <a href="#deals" data-lang="deals-discounts">Deals & Discounts</a>
+                        <a href="#refurbished" data-lang="refurbished">Refurbished</a>
+                    </div>
+                </div>
+                <a href="support.html" class="nav-link bold" data-lang="support">Support</a>
+                <a href="#deals" class="nav-link bold" data-lang="deals">Deals</a>
+            </div>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <button class="search-toggle" aria-label="Toggle search"><i class="fas fa-search"></i></button>
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="Search products..." data-lang-placeholder="search" aria-label="Search products">
+                        <div class="search-results"></div>
+                    </div>
+                </div>
+                <a href="#" class="cart-btn" aria-label="View cart"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <a href="account.html" class="account-btn" aria-label="Account"><i class="far fa-user"></i></a>
+                <div class="theme-toggle" role="button" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="lang-switcher">
+                    <div class="lang-icon" role="button" aria-label="Select language">
+                        <img src="" alt="Language Flag" id="lang-flag">
+                    </div>
+                    <div class="lang-dropdown">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="ru">Русский</a>
+                        <a href="#" data-lang="hy">Հայերեն</a>
+                    </div>
+                </div>
+                <div class="menu-btn" role="button" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sidebar left"></aside>
+        <main>
+            <section class="products-section" id="shop">
+                <div class="section-header">
+                    <h2 data-lang="new-arrivals">New Arrivals</h2>
+                    <div class="product-controls">
+                        <div class="product-categories">
+                            <a href="#all" class="active" data-lang="all">All</a>
+                            <a href="#smartphones" data-lang="smartphones">Smartphones</a>
+                            <a href="#laptops" data-lang="laptops">Laptops</a>
+                            <a href="#accessories" data-lang="accessories">Accessories</a>
+                            <a href="#smart-home" data-lang="smart-home">Smart Home</a>
+                        </div>
+                        <div class="product-sort">
+                            <select id="sort-products" aria-label="Sort products">
+                                <option value="default">Sort by: Default</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="rating">Rating</option>
+                            </select>
+                        </div>
+                    </div>
+                    <a href="#all-products" class="view-all" data-lang="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card" data-category="smartphones">
+                        <div class="product-image">
+                            <img src="https://www.dxomark.com/wp-content/uploads/medias/post-157467/Apple-iPhone-15-Pro_-natural_featured-image-packshot-review-1024x691.jpg" alt="iPhone 15 Pro">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>iPhone 15 Pro</h3>
+                            <p class="designer">by Apple</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="999.00">$999.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(428)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="laptops">
+                        <div class="product-image">
+                            <img src="https://www.apple.com/v/macbook-pro-14-and-16/a/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png" alt="MacBook Pro">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>MacBook Pro 14"</h3>
+                            <p class="designer">by Apple</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="1599.00">$1,599.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(892)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smartphones">
+                        <div class="product-image">
+                            <img src="https://www.dxomark.com/wp-content/uploads/medias/post-154336/Samsung-Galaxy-Z-Fold5_screen_featured-image-packshot-review.jpg" alt="Galaxy Z Fold">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Galaxy Z Fold 5</h3>
+                            <p class="designer">by Samsung</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="1799.00">$1,799.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(312)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FV1_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=1725492498882" alt="AirPods Pro">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>AirPods Pro 2</h3>
+                            <p class="designer">by Apple</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="249.00">$249.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(765)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="tablets">
+                        <div class="product-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReA1Axl3RW1jk-bOe4AEcUknQYF5vETCOdsA&s" alt="iPad Pro">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>iPad Pro 12.9"</h3>
+                            <p class="designer">by Apple</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="1099.00">$1,099.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(234)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart-home">
+                        <div class="product-image">
+                            <img src="https://www.manualscat.com/thumbs/products/l/1229397-nest-hub-max.jpg" alt="Nest Hub">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Google Nest Hub</h3>
+                            <p class="designer">by Google</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="99.00">$99.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(456)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQofkikXA-qvqDegkTdT6aOFfx7dQnr9Ag6yA&s" alt="Galaxy Watch">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Galaxy Watch 6</h3>
+                            <p class="designer">by Samsung</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="349.00">$349.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(189)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="laptops">
+                        <div class="product-image">
+                            <img src="https://cityshop.com.pk/wp-content/uploads/2022/12/Microsoft-Surface-Laptop-5-Platinum-Alcantara-Right-Side.jpg" alt="Surface Laptop">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Surface Laptop 5</h3>
+                            <p class="designer">by Microsoft</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="1299.00">$1,299.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(321)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smartphones">
+                        <div class="product-image">
+                            <img src="https://www.dxomark.com/wp-content/uploads/medias/post-160143/Google-Pixel-8-featured-image-packshot-review-Recovered.jpg" alt="Pixel 8">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Pixel 8</h3>
+                            <p class="designer">by Google</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="699.00">$699.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(350)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="laptops">
+                        <div class="product-image">
+                            <img src="https://storage.googleapis.com/download/storage/v1/b/xooply-static-production/o/dev%2Fef2c0f2b-07a0-4f8a-88ff-ab5bb06c9d3c.jpg-6EIsdo.jpg?generation=1720246866015624&alt=media" alt="Dell XPS 13">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Dell XPS 13</h3>
+                            <p class="designer">by Dell</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="1299.00">$1299.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(600)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="tablets">
+                        <div class="product-image">
+                            <img src="https://i5.walmartimages.com/seo/Samsung-Galaxy-Tab-S9-11-Tablet-256GB-Gen-2-Graphite_e5bb76a7-bbdf-4ccb-b2c4-08a2d0b09ba1.dcc9573283b1e4a5a20be6888350df89.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Samsung Galaxy Tab S9">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Galaxy Tab S9</h3>
+                            <p class="designer">by Samsung</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="799.00">$799.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(280)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://www.thesonyshop.ca/cdn/shop/products/WH1000XM5L_1.jpg?v=1680535042" alt="Sony WH-1000XM5">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>WH-1000XM5</h3>
+                            <p class="designer">by Sony</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="399.00">$399.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(820)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart-home">
+                        <div class="product-image">
+                            <img src="https://www.bhphotovideo.com/images/fb/amazon_b082x1hrv5_echo_show_10_3rd_1623650.jpg" alt="Amazon Echo Show">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Echo Show 10</h3>
+                            <p class="designer">by Amazon</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="249.00">$249.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(410)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ultra-case-unselect-gallery-1-202409_GEO_IN_FMT_WHH?wid=752&hei=720&fmt=p-jpg&qlt=80&.v=1725399347133" alt="Apple Watch Ultra">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Apple Watch Ultra</h3>
+                            <p class="designer">by Apple</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="799.00">$799.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(500)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smartphones">
+                        <div class="product-image">
+                            <img src="https://www.dxomark.com/wp-content/uploads/medias/post-138310/OnePlus-11-Yoast-image-packshot-review.jpg" alt="OnePlus 11">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>OnePlus 11</h3>
+                            <p class="designer">by OnePlus</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="849.00">$849.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(320)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="laptops">
+                        <div class="product-image">
+                            <img src="https://p1-ofp.static.pub/fes/cms/2023/04/28/awpq0e6jt9ujg17v234kqrc7kfhzz4909134.png" alt="Lenovo ThinkPad X1">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>ThinkPad X1 Carbon</h3>
+                            <p class="designer">by Lenovo</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="1499.00">$1499.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(450)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://www.jbhifi.com.au/cdn/shop/products/597794-Product-0-I-637945070583397301.jpg?v=1658874344" alt="JBL Flip 6">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>JBL Flip 6</h3>
+                            <p class="designer">by JBL</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="129.00">$129.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(670)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart-home">
+                        <div class="product-image">
+                            <img src="https://i0.wp.com/astral.com.mt/wp-content/uploads/2023/07/PHilips-Hue-929002468804-e27-pack-dimmer-and-bridge.jpg?fit=1000%2C1000&ssl=1" alt="Philips Hue Starter Kit">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Hue Starter Kit</h3>
+                            <p class="designer">by Philips</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="199.00">$199.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(390)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="tablets">
+                        <div class="product-image">
+                            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Pro-9-EB-Angle?wid=834&hei=470&fit=crop" alt="Microsoft Surface Pro 9">
+                            <div class="product-badge bestseller">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Surface Pro 9</h3>
+                            <p class="designer">by Microsoft</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="1099.00">$1099.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(310)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://cdn11.bigcommerce.com/s-nmlj7kkgz5/images/stencil/1280x1280/products/2227/8916/10__32488.1651722845.jpg?c=1" alt="Anker PowerCore">
+                            <div class="product-badge new">New</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>PowerCore 10000</h3>
+                            <p class="designer">by Anker</p>
+                            <div class="price-container">
+                                <p class="price" data-price-usd="29.00">$29.00</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(780)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why-shop-section">
+                <div class="section-header">
+                    <h2 data-lang="why-shop">Why Shop With TechPlus?</h2>
+                </div>
+                <div class="why-shop-grid">
+                    <div class="why-shop-card">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3 data-lang="fast-shipping">Fast Shipping</h3>
+                        <p data-lang="fast-shipping-text">Free shipping on orders over $100 and expedited options available.</p>
+                    </div>
+                    <div class="why-shop-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3 data-lang="secure-payments">Secure Payments</h3>
+                        <p data-lang="secure-payments-text">Shop with confidence using our secure payment gateways.</p>
+                    </div>
+                    <div class="why-shop-card">
+                        <i class="fas fa-headset"></i>
+                        <h3 data-lang="support-24-7">24/7 Support</h3>
+                        <p data-lang="support-24-7-text">Our team is here to assist you anytime, anywhere.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter-section">
+                <div class="newsletter-content">
+                    <h2 data-lang="newsletter-title">Join the TechPlus Community</h2>
+                    <p data-lang="newsletter-text">Get exclusive access to new product launches, deals, and tech updates.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email address" required data-lang-placeholder="email" aria-label="Email address">
+                            <button type="submit" data-lang="subscribe">Subscribe <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        <div class="form-note">
+                            <i class="fas fa-lock"></i> <span data-lang="privacy">We respect your privacy. Unsubscribe at any time.</span>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <aside class="sidebar right"></aside>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 class="footer-logo" data-lang="logo">TechPlus<span>.</span></h3>
+                <p class="footer-about" data-lang="footer-about">Your one-stop shop for the latest in tech gadgets and electronics.</p>
+            </div>
+            <div class="footer-col">
+                <h3 data-lang="shop">Shop</h3>
+                <ul>
+                    <li><a href="#smartphones" data-lang="smartphones">Smartphones</a></li>
+                    <li><a href="#laptops" data-lang="laptops">Laptops</a></li>
+                    <li><a href="#tablets" data-lang="tablets">Tablets</a></li>
+                    <li><a href="#smart-home" data-lang="smart-home">Smart Home</a></li>
+                    <li><a href="#accessories" data-lang="accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 data-lang="support">Support</h3>
+                <ul>
+                    <li><a href="support.html#contact" data-lang="contact-us">Contact Us</a></li>
+                    <li><a href="support.html#shipping" data-lang="shipping-returns">Shipping & Returns</a></li>
+                    <li><a href="support.html#faq" data-lang="faq">FAQ</a></li>
+                    <li><a href="support.html#warranty" data-lang="warranty">Warranty</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 data-lang="connect">Connect</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection#7f0c0a0f0f100d0b3f0b1a1c170f130a0c511c1012"><span class="__cf_email__" data-cfemail="fb888e8b8b94898fbb8f9e98938b978e88d5989496">[email&#160;protected]</span></a></p>
+                    <p><i class="fas fa-phone"></i> (800) 555-0200</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-lang="copyright">© 2025 TechPlus. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="privacy.html" data-lang="privacy-policy">Privacy Policy</a>
+                <a href="terms.html" data-lang="terms-service">Terms of Service</a>
+                <a href="accessibility.html" data-lang="accessibility">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'931e476fbcd8ddcd',t:'MTc0NDkxNzYxOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
