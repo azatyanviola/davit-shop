@@ -1,285 +1,727 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="title">TechPlus | Premium Tech Gadgets & Electronics</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
-</head>
-<body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html" data-lang="logo"><span class="logo-tech">Tech</span><span class="logo-plus">Plus</span><span class="logo-dot">.</span></a>
-            </div>
-            <div class="nav-links">
-                <div class="nav-item">
-                    <a href="shop.html" class="nav-link bold" data-lang="shop" aria-haspopup="true">Shop <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="shop.html#smartphones" data-lang="smartphones">Smartphones</a>
-                        <a href="shop.html#laptops" data-lang="laptops">Laptops</a>
-                        <a href="shop.html#tablets" data-lang="tablets">Tablets</a>
-                        <a href="shop.html#smart-home" data-lang="smart-home">Smart Home</a>
-                        <a href="shop.html#accessories" data-lang="accessories">Accessories</a>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <a href="shop.html#categories" class="nav-link bold" data-lang="categories" aria-haspopup="true">Categories <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="shop.html#new-releases" data-lang="new-releases">New Releases</a>
-                        <a href="shop.html#best-sellers" data-lang="best-sellers">Best Sellers</a>
-                        <a href="shop.html#deals" data-lang="deals-discounts">Deals & Discounts</a>
-                        <a href="shop.html#refurbished" data-lang="refurbished">Refurbished</a>
-                    </div>
-                </div>
-                <a href="support.html" class="nav-link bold" data-lang="support">Support</a>
-                <a href="shop.html#deals" class="nav-link bold" data-lang="deals">Deals</a>
-            </div>
-            <div class="nav-actions">
-                <a href="#" class="cart-btn" aria-label="View cart"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
-                <a href="account.html" class="account-btn" aria-label="Account"><i class="far fa-user"></i></a>
-                <div class="theme-toggle" role="button" aria-label="Toggle theme">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                </div>
-                <div class="lang-switcher">
-                    <div class="lang-icon" role="button" aria-label="Select language">
-                        <img src="" alt="Language Flag" id="lang-flag" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2716%27 viewBox=%270 0 24 16%27%3E%3Crect width=%2724%27 height=%2716%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2710%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EEN%3C/text%3E%3C/svg%3E';">
-                    </div>
-                    <div class="lang-dropdown">
-                        <a href="#" data-lang="en">English</a>
-                        <a href="#" data-lang="ru">Русский</a>
-                        <a href="#" data-lang="hy">Հայերեն</a>
-                    </div>
-                </div>
-                <div class="menu-btn" role="button" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+document.addEventListener('DOMContentLoaded', function() {
+    // Language translations with currency symbols
+    const translations = {
+        en: {
+            title: "TechPlus | Premium Tech Gadgets & Electronics",
+            logo: "TechPlus",
+            shop: "Shop",
+            categories: "Categories",
+            support: "Support",
+            deals: "Deals",
+            smartphones: "Smartphones",
+            laptops: "Laptops",
+            tablets: "Tablets",
+            smart_home: "Smart Home",
+            accessories: "Accessories",
+            new_releases: "New Releases",
+            best_sellers: "Best Sellers",
+            deals_discounts: "Deals & Discounts",
+            refurbished: "Refurbished",
+            search: "Search products...",
+            announcement: "✨ Free shipping on orders over $100 | New tech arrivals now live!",
+            hero_title: "TechPlus - Innovate Your Life",
+            hero_subtitle: "Explore cutting-edge gadgets and electronics",
+            shop_now: "Shop Now",
+            latest_deals: "Latest Deals",
+            brands_text: "Trusted by tech enthusiasts worldwidethernet worldwide",
+            new_arrivals: "New Arrivals",
+            all: "All",
+            view_all: "View All",
+            why_shop: "Why Shop With TechPlus?",
+            fast_shipping: "Fast Shipping",
+            fast_shipping_text: "Free shipping on orders over $100 and expedited options available.",
+            secure_payments: "Secure Payments",
+            secure_payments_text: "Shop with confidence using our secure payment gateways.",
+            support_24_7: "24/7 Support",
+            support_24_7_text: "Our team is here to assist you anytime, anywhere.",
+            newsletter_title: "Join the TechPlus Community",
+            newsletter_text: "Get exclusive access to new product launches, deals, and tech updates.",
+            email: "Your email address",
+            subscribe: "Subscribe",
+            privacy: "We respect your privacy. Unsubscribe at any time.",
+            footer_about: "Your one-stop shop for the latest in tech gadgets and electronics.",
+            connect: "Connect",
+            contact_us: "Contact Us",
+            shipping_returns: "Shipping & Returns",
+            faq: "FAQ",
+            warranty: "Warranty",
+            copyright: "© 2025 TechPlus. All rights reserved.",
+            privacy_policy: "Privacy Policy",
+            terms_service: "Terms of Service",
+            accessibility: "Accessibility",
+            currency_symbol: "$",
+            cart_empty: "Your cart is empty.",
+            checkout_success: "Checkout successful! Thank you for your purchase.",
+            checkout: "Checkout",
+            subtotal: "Subtotal",
+            about_us: "About TechPlus",
+            about_text: "Welcome to TechPlus, your premier destination for the latest in technology and electronics. We pride ourselves on offering a curated selection of high-quality gadgets from top brands, ensuring you stay ahead in the tech world. Our mission is to innovate your life with cutting-edge products and exceptional customer service.",
+            explore_now: "Explore Our Products",
+            featured_products: "Featured Products",
+            our_gallery: "Our Tech World"
+        },
+        ru: {
+            title: "TechPlus | Премиум гаджеты и электроника",
+            logo: "TechPlus",
+            shop: "Магазин",
+            categories: "Категории",
+            support: "Поддержка",
+            deals: "Акции",
+            smartphones: "Смартфоны",
+            laptops: "Ноутбуки",
+            tablets: "Планшеты",
+            smart_home: "Умный дом",
+            accessories: "Аксессуары",
+            new_releases: "Новинки",
+            best_sellers: "Бестселлеры",
+            deals_discounts: "Акции и скидки",
+            refurbished: "Восстановленные",
+            search: "Поиск продуктов...",
+            announcement: "✨ Бесплатная доставка при заказе от 7000 ₽ | Новые поступления уже в продаже!",
+            hero_title: "TechPlus - Инновации в вашей жизни",
+            hero_subtitle: "Исследуйте передовые гаджеты и электронику",
+            shop_now: "Купить сейчас",
+            latest_deals: "Последние акции",
+            brands_text: "Доверяют любители технологий по всему миру",
+            new_arrivals: "Новые поступления",
+            all: "Все",
+            view_all: "Посмотреть все",
+            why_shop: "Почему выбирают TechPlus?",
+            fast_shipping: "Быстрая доставка",
+            fast_shipping_text: "Бесплатная доставка при заказе от 7000 ₽ и ускоренные варианты.",
+            secure_payments: "Безопасные платежи",
+            secure_payments_text: "Покупайте с уверенностью благодаря безопасным платежным системам.",
+            support_24_7: "Поддержка 24/7",
+            support_24_7_text: "Наша команда готова помочь вам в любое время.",
+            newsletter_title: "Присоединяйтесь к сообществу TechPlus",
+            newsletter_text: "Получите эксклюзивный доступ к новым продуктам, акциям и новостям.",
+            email: "Ваш адрес электронной почты",
+            subscribe: "Подписаться",
+            privacy: "Мы уважаем вашу конфиденциальность. Отписаться можно в любое время.",
+            footer_about: "Ваш универсальный магазин для новейших гаджетов и электроники.",
+            connect: "Связаться",
+            contact_us: "Связаться с нами",
+            shipping_returns: "Доставка и возврат",
+            faq: "Часто задаваемые вопросы",
+            warranty: "Гарантия",
+            copyright: "© 2025 TechPlus. Все права защищены.",
+            privacy_policy: "Политика конфиденциальности",
+            terms_service: "Условия обслуживания",
+            accessibility: "Доступность",
+            currency_symbol: "₽",
+            cart_empty: "Ваша корзина пуста.",
+            checkout_success: "Оформление заказа успешно! Спасибо за покупку.",
+            checkout: "Оформить заказ",
+            subtotal: "Итого",
+            about_us: "О TechPlus",
+            about_text: "Добро пожаловать в TechPlus, ваш главный источник новейших технологий и электроники. Мы гордимся тем, что предлагаем тщательно отобранные высококачественные гаджеты от ведущих брендов, чтобы вы всегда были на шаг впереди в мире технологий. Наша миссия — внедрять инновации в вашу жизнь с помощью передовых продуктов и исключительного обслуживания клиентов.",
+            explore_now: "Исследуйте наши продукты",
+            featured_products: "Рекомендуемые продукты",
+            our_gallery: "Наш технологический мир"
+        },
+        hy: {
+            title: "TechPlus | Պրեմիում տեխնոլոգիաներ և էլեկտրոնիկա",
+            logo: "TechPlus",
+            shop: "Խանութ",
+            categories: "Կատեգորիաներ",
+            support: "Աջակցություն",
+            deals: "Գործարքներ",
+            smartphones: "Սմարթֆոններ",
+            laptops: "Նոութբուքեր",
+            tablets: "Պլանշետներ",
+            smart_home: "Խելացի տուն",
+            accessories: "Աքսեսուարներ",
+            new_releases: "Նորույթներ",
+            best_sellers: "Լավագույն վաճառք",
+            deals_discounts: "Գործարքներ և զեղչեր",
+            refurbished: "Վերանորոգված",
+            search: "Որոնել ապրանքներ...",
+            announcement: "✨ Անվճար առաքում 50,000 դրամից սկսած պատվերների դեպքում | Նոր տեխնոլոգիաներ հիմա վաճառքում!",
+            hero_title: "TechPlus - Նորարարություն Ձեր կյանքում",
+            hero_subtitle: "Հայտնաբերեք առաջադեմ սարքեր և էլեկտրոնիկա",
+            shop_now: "Գնել հիմա",
+            latest_deals: "Վերջին գործարքներ",
+            brands_text: "Վստահում են տեխնոլոգիաների սիրահարները ամբողջ աշխարհում",
+            new_arrivals: "Նոր ժամանումներ",
+            all: "Բոլորը",
+            view_all: "Դիտել բոլորը",
+            why_shop: "Ինչու՞ ընտրել TechPlus-ը",
+            fast_shipping: "Արագ առաքում",
+            fast_shipping_text: "Անվճար առաքում 50,000 դրամից սկսած պատվերների դեպքում և արագացված տարբերակներ:",
+            secure_payments: "Անվտանգ վճարումներ",
+            secure_payments_text: "Գնեք վստահորեն՝ օգտագործելով մեր անվտանգ վճարային համակարգերը:",
+            support_24_7: "24/7 Աջակցություն",
+            support_24_7_text: "Մեր թիմը պատրաստ է օգնել Ձեզ ցանկացած ժամանակ, ցանկացած վայրում:",
+            newsletter_title: "Միացեք TechPlus համայնքին",
+            newsletter_text: "Ստացեք բացառիկ մուտք դեպի նոր ապրանքներ, գործարքներ և տեխնոլոգիական նորություններ:",
+            email: "Ձեր էլ. փոստի հասցեն",
+            subscribe: "Բաժանորդագրվել",
+            privacy: "Մենք հարգում ենք Ձեր գաղտնիությունը: Կարող եք չեղարկել բաժանորդագրությունը ցանկացած ժամանակ:",
+            footer_about: "Ձեր միակ կանգառը վերջին տեխնոլոգիաների և էլեկտրոնիկայի համար:",
+            connect: "Կապվել",
+            contact_us: "Կապվեք մեզ հետ",
+            shipping_returns: "Առաքում և վերադարձ",
+            faq: "Հաճախ տրվող հարցեր",
+            warranty: "Երաշխիք",
+            copyright: "© 2025 TechPlus: Բոլոր իրավունքները պաշտպանված են:",
+            privacy_policy: "Գաղտնիության քաղաքականություն",
+            terms_service: "Ծառայությունների պայմաններ",
+            accessibility: "Հաշմանդամություն",
+            currency_symbol: "֏",
+            cart_empty: "Ձեր զամբյուղը դատարկ է:",
+            checkout_success: "Պատվերը հաջողությամբ կատարվել է: Շնորհակալություն գնումների համար:",
+            checkout: "Հաշվարկ",
+            subtotal: "Ընդամենը",
+            about_us: "TechPlus-ի մասին",
+            about_text: "Բարի գալուստ TechPlus՝ Ձեր առաջնային նպատակակետը նորագույն տեխնոլոգիաների և էլեկտրոնիկայի համար: Մենք հպարտանում ենք առաջարկելով բարձրորակ գաջեթների ընտրված տեսականի առաջատար ապրանքանիշերից՝ ապահովելով, որ Դուք միշտ առաջ եք տեխնոլոգիական աշխարհում: Մեր առաքելությունն է նորարարություն բերել Ձեր կյանք՝ առաջարկելով առաջադեմ արտադրանք և բացառիկ հաճախորդների սպասարկում:",
+            explore_now: "Հայտնաբերեք մեր արտադրանքը",
+            featured_products: "Հատուկ ընտրված արտադրանք",
+            our_gallery: "Մեր տեխնոլոգիական աշխարհը"
+        }
+    };
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1 class="hero-title" data-lang="hero-title">TechPlus - Innovate Your Life</h1>
-            <p class="hero-subtitle" data-lang="hero-subtitle">Explore cutting-edge gadgets and electronics</p>
-            <div class="hero-btns">
-                <a href="shop.html" class="hero-btn shop-now" data-lang="shop-now">Shop Now</a>
-                <a href="shop.html#deals" class="hero-btn secondary" data-lang="latest-deals">Latest Deals</a>
-            </div>
-        </div>
-    </section>
+    // Flag images for languages with fallback
+    const flagImages = {
+        en: "https://flagcdn.com/w40/us.png",
+        ru: "https://flagcdn.com/w40/ru.png",
+        hy: "https://flagcdn.com/w40/am.png",
+        fallback: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='16' viewBox='0 0 24 16'><rect width='24' height='16' fill='gray'/><text x='50%' y='50%' font-size='10' fill='white' text-anchor='middle' dominant-baseline='middle'>EN</text></svg>"
+    };
 
-    <div class="layout-container">
-        <aside class="sidebar left"></aside>
-        <main>
-            <section class="about-section">
-                <div class="section-header">
-                    <h2 data-lang="about-us">About TechPlus</h2>
-                </div>
-                <div class="about-content">
-                    <p data-lang="about-text">Welcome to TechPlus, your premier destination for the latest in technology and electronics. We pride ourselves on offering a curated selection of high-quality gadgets from top brands, ensuring you stay ahead in the tech world. Our mission is to innovate your life with cutting-edge products and exceptional customer service.</p>
-                    <a href="shop.html" class="btn explore-now" data-lang="explore-now">Explore Our Products</a>
-                </div>
-            </section>
+    // Currency conversion rates (relative to USD)
+    const currencyRates = {
+        en: 1,      // USD
+        ru: 90,     // RUB
+        hy: 400     // AMD
+    };
 
-            <section class="brands-section">
-                <p data-lang="brands-text">Trusted by tech enthusiasts worldwide</p>
-                <div class="brands-grid">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%2740%27 viewBox=%270 0 100 40%27%3E%3Crect width=%27100%27 height=%2740%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2714%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EApple%3C/text%3E%3C/svg%3E';">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%2740%27 viewBox=%270 0 100 40%27%3E%3Crect width=%27100%27 height=%2740%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2714%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3ESamsung%3C/text%3E%3C/svg%3E';">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%2740%27 viewBox=%270 0 100 40%27%3E%3Crect width=%27100%27 height=%2740%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2714%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EAmazon%3C/text%3E%3C/svg%3E';">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%2740%27 viewBox=%270 0 100 40%27%3E%3Crect width=%27100%27 height=%2740%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2714%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMicrosoft%3C/text%3E%3C/svg%3E';">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%2740%27 viewBox=%270 0 100 40%27%3E%3Crect width=%27100%27 height=%2740%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2714%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EIBM%3C/text%3E%3C/svg%3E';">
-                </div>
-            </section>
+    // Initialize state
+    let currentLang = localStorage.getItem('language') || 'en';
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-            <section class="featured-products">
-                <div class="section-header">
-                    <h2 data-lang="featured-products">Featured Products</h2>
-                    <a href="shop.html" class="view-all" data-lang="view-all">View All <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="products-grid">
-                    <div class="product-card" data-category="smartphones">
-                        <div class="product-image">
-                            <img src="https://www.dxomark.com/wp-content/uploads/medias/post-157467/Apple-iPhone-15-Pro_-natural_featured-image-packshot-review-1024x691.jpg" alt="iPhone 15 Pro" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27250%27 height=%27200%27 viewBox=%270 0 250 200%27%3E%3Crect width=%27250%27 height=%27200%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2720%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EiPhone 15 Pro%3C/text%3E%3C/svg%3E';">
-                            <div class="product-badge new">New</div>
-                            <div class="product-actions">
-                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                                <button class="quick-view">Quick View</button>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>iPhone 15 Pro</h3>
-                            <p class="designer">by Apple</p>
-                            <div class="price-container">
-                                <p class="price" data-price-usd="999.00">$999.00</p>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                    <span>(428)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card" data-category="laptops">
-                        <div class="product-image">
-                            <img src="https://www.apple.com/v/macbook-pro-14-and-16/a/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png" alt="MacBook Pro" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27250%27 height=%27200%27 viewBox=%270 0 250 200%27%3E%3Crect width=%27250%27 height=%27200%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2720%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMacBook Pro%3C/text%3E%3C/svg%3E';">
-                            <div class="product-badge bestseller">Bestseller</div>
-                            <div class="product-actions">
-                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                                <button class="quick-view">Quick View</button>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>MacBook Pro 14"</h3>
-                            <p class="designer">by Apple</p>
-                            <div class="price-container">
-                                <p class="price" data-price-usd="1599.00">$1,599.00</p>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>(892)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card" data-category="accessories">
-                        <div class="product-image">
-                            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FV1_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=1725492498882" alt="AirPods Pro" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27250%27 height=%27200%27 viewBox=%270 0 250 200%27%3E%3Crect width=%27250%27 height=%27200%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2720%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EAirPods Pro%3C/text%3E%3C/svg%3E';">
-                            <div class="product-badge bestseller">Bestseller</div>
-                            <div class="product-actions">
-                                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                                <button class="quick-view">Quick View</button>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>AirPods Pro 2</h3>
-                            <p class="designer">by Apple</p>
-                            <div class="price-container">
-                                <p class="price" data-price-usd="249.00">$249.00</p>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                    <span>(765)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    // DOM Elements
+    const header = document.querySelector('header');
+    const hero = document.querySelector('.hero');
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
+    const searchToggle = document.querySelector('.search-toggle');
+    const searchBar = document.querySelector('.search-bar');
+    const searchInput = document.querySelector('.search-input');
+    const searchResults = document.querySelector('.search-results');
+    const cartBtn = document.querySelector('.cart-btn');
+    const cartCount = document.querySelector('.cart-count');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const langSwitcher = document.querySelector('.lang-switcher');
+    const langFlag = document.querySelector('#lang-flag');
+    const langDropdown = document.querySelector('.lang-dropdown');
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const productCards = document.querySelectorAll('.product-card');
+    const sortSelect = document.querySelector('#sort-products');
+    const productCategories = document.querySelectorAll('.product-categories a');
+    const newsletterForm = document.querySelector('.newsletter-form');
+    let cartModal = document.querySelector('.cart-modal');
+    let modalOverlay = document.querySelector('.modal-overlay');
+    const scrollToTop = document.createElement('div');
 
-            <section class="gallery-section">
-                <div class="section-header">
-                    <h2 data-lang="our-gallery">Our Tech World</h2>
-                </div>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1504707748692-419802cf939d" alt="Smart Home" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27300%27 height=%27200%27 viewBox=%270 0 300 200%27%3E%3Crect width=%27300%27 height=%27200%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2720%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3ESmart Home%3C/text%3E%3C/svg%3E';">
-                        <div class="gallery-overlay">
-                            <p>Smart Home Solutions</p>
-                            <a href="shop.html#smart-home" class="btn">Explore</a>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Gadgets" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27300%27 height=%27200%27 viewBox=%270 0 300 200%27%3E%3Crect width=%27300%27 height=%27200%27 fill=%27gray%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2720%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EGadgets%3C/text%3E%3C/svg%3E';">
-                        <div class="gallery-overlay">
-                            <p>Latest Gadgets</p>
-                            <a href="shop.html" class="btn">View All</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    // Initialize page
+    function initialize() {
+        initializeModals();
+        updateLanguage(currentLang);
+        updateCartCount();
+        setupEventListeners();
+        showHeader();
+        animateHero();
+        setupScrollAnimations();
+        updateWishlistIcons();
+        initializeTheme();
+        initializeScrollToTop();
+        setupNavigation();
+    }
 
-            <section class="newsletter-section">
-                <div class="newsletter-content">
-                    <h2 data-lang="newsletter-title">Join the TechPlus Community</h2>
-                    <p data-lang="newsletter-text">Get exclusive access to new product launches, deals, and tech updates.</p>
-                    <form class="newsletter-form">
-                        <div class="form-group">
-                            <input type="email" placeholder="Your email address" required data-lang-placeholder="email" aria-label="Email address">
-                            <button type="submit" data-lang="subscribe">Subscribe <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                        <div class="form-note">
-                            <i class="fas fa-lock"></i> <span data-lang="privacy">We respect your privacy. Unsubscribe at any time.</span>
-                        </div>
-                    </form>
+    // Initialize modals
+    function initializeModals() {
+        if (!cartModal) {
+            cartModal = document.createElement('div');
+            cartModal.className = 'cart-modal';
+            cartModal.setAttribute('tabindex', '-1');
+            cartModal.setAttribute('role', 'dialog');
+            cartModal.setAttribute('aria-labelledby', 'cart-modal-title');
+            cartModal.innerHTML = `
+                <div class="cart-header">
+                    <h3 id="cart-modal-title">Your Cart</h3>
+                    <i class="fas fa-times cart-close" aria-label="Close cart"></i>
                 </div>
-            </section>
-        </main>
-        <aside class="sidebar right"></aside>
-    </div>
+                <div class="cart-body"></div>
+                <div class="cart-footer">
+                    <p class="subtotal"><span data-lang="subtotal">Subtotal</span>: <span class="subtotal-amount">0.00</span></p>
+                    <button class="checkout-btn" data-lang="checkout">Checkout</button>
+                </div>
+            `;
+            document.body.appendChild(cartModal);
+        }
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3 class="footer-logo" data-lang="logo">TechPlus<span>.</span></h3>
-                <p class="footer-about" data-lang="footer-about">Your one-stop shop for the latest in tech gadgets and electronics.</p>
-            </div>
-            <div class="footer-col">
-                <h3 data-lang="shop">Shop</h3>
-                <ul>
-                    <li><a href="shop.html#smartphones" data-lang="smartphones">Smartphones</a></li>
-                    <li><a href="shop.html#laptops" data-lang="laptops">Laptops</a></li>
-                    <li><a href="shop.html#tablets" data-lang="tablets">Tablets</a></li>
-                    <li><a href="shop.html#smart-home" data-lang="smart-home">Smart Home</a></li>
-                    <li><a href="shop.html#accessories" data-lang="accessories">Accessories</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3 data-lang="support">Support</h3>
-                <ul>
-                    <li><a href="support.html#contact" data-lang="contact-us">Contact Us</a></li>
-                    <li><a href="support.html#shipping" data-lang="shipping-returns">Shipping & Returns</a></li>
-                    <li><a href="support.html#faq" data-lang="faq">FAQ</a></li>
-                    <li><a href="support.html#warranty" data-lang="warranty">Warranty</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3 data-lang="connect">Connect</h3>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection#0c7f797c7c637e784c78696f647c60797f226f6361"><span class="__cf_email__" data-cfemail="0477323737283533443322242f372b32346924282a">[email&#160;protected]</span></a></p>
-                    <p><i class="fas fa-phone"></i> (800) 555-0200</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p data-lang="copyright">© 2025 TechPlus. All rights reserved.</p>
-            <div class="legal-links">
-                <a href="privacy.html" data-lang="privacy-policy">Privacy Policy</a>
-                <a href="terms.html" data-lang="terms-service">Terms of Service</a>
-                <a href="accessibility.html" data-lang="accessibility">Accessibility</a>
-            </div>
-        </div>
-    </footer>
+        if (!modalOverlay) {
+            modalOverlay = document.createElement('div');
+            modalOverlay.className = 'modal-overlay';
+            document.body.appendChild(modalOverlay);
+        }
+    }
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="script.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'931e46723970ddcd',t:'MTc0NDkxNzU3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933b43790e77afb4',t:'MTc0NTIyMTU0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+    // Update language and currency
+    function updateLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        if (langFlag) {
+            langFlag.src = flagImages[lang] || flagImages.fallback;
+        }
+        document.querySelectorAll('[data-lang]').forEach(element => {
+            const key = element.getAttribute('data-lang');
+            if (translations[lang][key]) {
+                element.textContent = translations[lang][key];
+                if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+                    element.placeholder = translations[lang][key];
+                }
+            }
+        });
+
+        // Update currency
+        document.querySelectorAll('.price').forEach(priceElement => {
+            const usdPrice = parseFloat(priceElement.getAttribute('data-price-usd'));
+            const convertedPrice = (usdPrice * currencyRates[lang]).toFixed(2);
+            priceElement.textContent = `${translations[lang].currency_symbol}${convertedPrice}`;
+        });
+
+        // Update cart modal title and buttons
+        if (cartModal) {
+            const cartTitle = cartModal.querySelector('#cart-modal-title');
+            if (cartTitle) {
+                cartTitle.textContent = translations[lang].cart_empty;
+                if (cart.length > 0) {
+                    cartTitle.textContent = translations[lang].logo;
+                }
+            }
+            updateCartModal();
+        }
+
+        // Update document title
+        document.title = translations[lang].title;
+    }
+
+    // Update cart count
+    function updateCartCount() {
+        if (cartCount) {
+            cartCount.textContent = cart.length;
+        }
+    }
+
+    // Setup event listeners
+    function setupEventListeners() {
+        // Cursor effects
+        document.addEventListener('mousemove', e => {
+            if (cursor && cursorFollower) {
+                cursor.style.left = `${e.clientX}px`;
+                cursor.style.top = `${e.clientY}px`;
+                setTimeout(() => {
+                    cursorFollower.style.left = `${e.clientX}px`;
+                    cursorFollower.style.top = `${e.clientY}px`;
+                }, 100);
+            }
+        });
+
+        // Conditionally apply search functionality only if not on index.html
+        if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
+            // Search toggle
+            if (searchToggle && searchBar && searchInput) {
+                searchToggle.addEventListener('click', () => {
+                    searchBar.classList.toggle('active');
+                    searchInput.focus();
+                });
+
+                // Search functionality
+                searchInput.addEventListener('input', () => {
+                    const query = searchInput.value.toLowerCase();
+                    if (searchResults) {
+                        searchResults.innerHTML = '';
+                        if (query) {
+                            const results = Array.from(productCards).filter(card =>
+                                card.querySelector('h3') && card.querySelector('h3').textContent.toLowerCase().includes(query)
+                            );
+                            results.forEach(card => {
+                                const resultItem = document.createElement('div');
+                                resultItem.className = 'search-result-item';
+                                resultItem.innerHTML = `
+                                    <img src="${card.querySelector('img')?.src || flagImages.fallback}" alt="${card.querySelector('h3').textContent}">
+                                    <p>${card.querySelector('h3').textContent}</p>
+                                `;
+                                resultItem.addEventListener('click', () => {
+                                    card.scrollIntoView({ behavior: 'smooth' });
+                                    searchBar.classList.remove('active');
+                                    searchInput.value = '';
+                                    searchResults.innerHTML = '';
+                                });
+                                searchResults.appendChild(resultItem);
+                            });
+                        }
+                    }
+                });
+
+                // Close search on outside click
+                document.addEventListener('click', e => {
+                    if (!searchBar.contains(e.target) && !searchToggle.contains(e.target)) {
+                        searchBar.classList.remove('active');
+                    }
+                });
+            }
+        }
+
+        // Cart button
+        if (cartBtn) {
+            cartBtn.addEventListener('click', () => {
+                updateCartModal();
+                if (cartModal && modalOverlay) {
+                    cartModal.classList.add('active');
+                    modalOverlay.classList.add('active');
+                }
+            });
+        }
+
+        // Close cart modal
+        if (cartModal) {
+            cartModal.addEventListener('click', e => {
+                if (e.target.classList.contains('cart-close')) {
+                    cartModal.classList.remove('active');
+                    if (modalOverlay) {
+                        modalOverlay.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // Modal overlay close
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', () => {
+                if (cartModal) {
+                    cartModal.classList.remove('active');
+                }
+                modalOverlay.classList.remove('active');
+            });
+        }
+
+        // Theme toggle
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+                updateThemeIcons();
+            });
+        }
+
+        // Language switcher
+        if (langSwitcher && langDropdown) {
+            langSwitcher.addEventListener('click', () => {
+                langDropdown.classList.toggle('active');
+            });
+
+            langDropdown.addEventListener('click', e => {
+                if (e.target.tagName === 'A') {
+                    e.preventDefault();
+                    const lang = e.target.getAttribute('data-lang');
+                    updateLanguage(lang);
+                    langDropdown.classList.remove('active');
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuBtn.classList.toggle('active');
+            });
+        }
+
+        // Product category filter
+        productCategories.forEach(category => {
+            category.addEventListener('click', e => {
+                e.preventDefault();
+                productCategories.forEach(cat => cat.classList.remove('active'));
+                category.classList.add('active');
+                const filter = category.getAttribute('href').substring(1);
+                filterProducts(filter);
+            });
+        });
+
+        // Product sorting
+        if (sortSelect) {
+            sortSelect.addEventListener('change', () => {
+                sortProducts(sortSelect.value);
+            });
+        }
+
+        // Add to cart
+        productCards.forEach(card => {
+            const addToCartBtn = card.querySelector('.add-to-cart');
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', () => {
+                    const product = {
+                        name: card.querySelector('h3')?.textContent || 'Unknown Product',
+                        price: parseFloat(card.querySelector('.price')?.getAttribute('data-price-usd')) || 0,
+                        image: card.querySelector('img')?.src || flagImages.fallback
+                    };
+                    cart.push(product);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartCount();
+                    updateCartModal();
+                });
+            }
+        });
+
+        // Wishlist toggle
+        productCards.forEach(card => {
+            const wishlistBtn = card.querySelector('.wishlist-btn');
+            if (wishlistBtn) {
+                wishlistBtn.addEventListener('click', () => {
+                    const productName = card.querySelector('h3')?.textContent || '';
+                    if (wishlist.includes(productName)) {
+                        wishlist = wishlist.filter(item => item !== productName);
+                        wishlistBtn.classList.remove('active');
+                    } else {
+                        wishlist.push(productName);
+                        wishlistBtn.classList.add('active');
+                    }
+                    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                });
+            }
+        });
+
+        // Newsletter form
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', e => {
+                e.preventDefault();
+                const emailInput = newsletterForm.querySelector('input[type="email"]');
+                if (emailInput) {
+                    const email = emailInput.value;
+                    alert(`Subscribed with: ${email}`);
+                    newsletterForm.reset();
+                }
+            });
+        }
+
+        // Close dropdowns on outside click
+        document.addEventListener('click', e => {
+            if (langSwitcher && langDropdown && !langSwitcher.contains(e.target)) {
+                langDropdown.classList.remove('active');
+            }
+        });
+    }
+
+    // Update cart modal
+    function updateCartModal() {
+        if (!cartModal) return;
+        const cartBody = cartModal.querySelector('.cart-body');
+        const subtotalAmount = cartModal.querySelector('.subtotal-amount');
+        if (!cartBody || !subtotalAmount) return;
+
+        cartBody.innerHTML = '';
+        if (cart.length === 0) {
+            cartBody.innerHTML = `<p data-lang="cart_empty">${translations[currentLang].cart_empty}</p>`;
+            subtotalAmount.textContent = '0.00';
+            return;
+        }
+
+        let subtotal = 0;
+        cart.forEach((item, index) => {
+            const convertedPrice = (item.price * currencyRates[currentLang]).toFixed(2);
+            subtotal += item.price * currencyRates[currentLang];
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" onerror="this.src='${flagImages.fallback}'">
+                <div class="cart-item-info">
+                    <h4>${item.name}</h4>
+                    <p>${translations[currentLang].currency_symbol}${convertedPrice}</p>
+                </div>
+                <button class="remove-item" data-index="${index}"><i class="fas fa-trash"></i></button>
+            `;
+            cartBody.appendChild(cartItem);
+        });
+
+        subtotalAmount.textContent = `${translations[currentLang].currency_symbol}${subtotal.toFixed(2)}`;
+
+        // Remove item from cart
+        cartBody.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', () => {
+                const index = button.getAttribute('data-index');
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                updateCartModal();
+            });
+        });
+
+        // Checkout button
+        const checkoutBtn = cartModal.querySelector('.checkout-btn');
+        if (checkoutBtn) {
+            checkoutBtn.textContent = translations[currentLang].checkout;
+            checkoutBtn.addEventListener('click', () => {
+                alert(translations[currentLang].checkout_success);
+                cart = [];
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                updateCartModal();
+                if (cartModal && modalOverlay) {
+                    cartModal.classList.remove('active');
+                    modalOverlay.classList.remove('active');
+                }
+            });
+        }
+    }
+
+    // Show header with animation
+    function showHeader() {
+        if (header) {
+            setTimeout(() => {
+                header.classList.add('active');
+            }, 300);
+        }
+    }
+
+    // Animate hero section
+    function animateHero() {
+        if (hero) {
+            setTimeout(() => {
+                hero.classList.add('active');
+            }, 500);
+        }
+    }
+
+    // Setup scroll animations
+    function setupScrollAnimations() {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.products-section, .why-shop-section, .newsletter-section, .about-section, .brands-section, .featured-products, .gallery-section').forEach(section => {
+            observer.observe(section);
+        });
+    }
+
+    // Update wishlist icons
+    function updateWishlistIcons() {
+        productCards.forEach(card => {
+            const wishlistBtn = card.querySelector('.wishlist-btn');
+            const productName = card.querySelector('h3')?.textContent || '';
+            if (wishlistBtn && wishlist.includes(productName)) {
+                wishlistBtn.classList.add('active');
+            }
+        });
+    }
+
+    // Initialize theme
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+        updateThemeIcons();
+    }
+
+    // Update theme icons
+    function updateThemeIcons() {
+        if (themeToggle) {
+            const sun = themeToggle.querySelector('.fa-sun');
+            const moon = themeToggle.querySelector('.fa-moon');
+            if (sun && moon) {
+                if (document.body.classList.contains('dark-theme')) {
+                    sun.style.opacity = '0';
+                    moon.style.opacity = '1';
+                } else {
+                    sun.style.opacity = '1';
+                    moon.style.opacity = '0';
+                }
+            }
+        }
+    }
+
+    // Initialize scroll to top
+    function initializeScrollToTop() {
+        scrollToTop.className = 'scroll-to-top';
+        scrollToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        document.body.appendChild(scrollToTop);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTop.classList.add('active');
+            } else {
+                scrollToTop.classList.remove('active');
+            }
+        });
+
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Filter products
+    function filterProducts(category) {
+        productCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            if (category === 'all' || cardCategory === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Sort products
+    function sortProducts(criteria) {
+        const productsArray = Array.from(productCards);
+        productsArray.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('.price')?.getAttribute('data-price-usd') || 0);
+            const priceB = parseFloat(b.querySelector('.price')?.getAttribute('data-price-usd') || 0);
+            const ratingA = a.querySelector('.rating span')?.textContent.replace(/[()]/g, '') || '0';
+            const ratingB = b.querySelector('.rating span')?.textContent.replace(/[()]/g, '') || '0';
+
+            if (criteria === 'price-asc') {
+                return priceA - priceB;
+            } else if (criteria === 'price-desc') {
+                return priceB - priceA;
+            } else if (criteria === 'rating') {
+                return ratingB - ratingA;
+            }
+            return 0;
+        });
+
+        const productsGrid = document.querySelector('.products-grid');
+        if (productsGrid) {
+            productsGrid.innerHTML = '';
+            productsArray.forEach(card => productsGrid.appendChild(card));
+        }
+    }
+
+    // Setup navigation
+    function setupNavigation() {
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            const dropdown = item.querySelector('.dropdown');
+            if (dropdown) {
+                item.addEventListener('mouseenter', () => {
+                    dropdown.classList.add('active');
+                });
+                item.addEventListener('mouseleave', () => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+    }
+
+    // Run initialization
+    initialize();
+});
